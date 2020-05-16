@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <div>iframe use separate thread if number is auto increment after 5 second.</div>
+    <div id="count"></div>
+    <iframe src="./iframe.html"></iframe>
+    <script>
+        let count = 0;
+        setInterval(() => {
+            console.log('this is a', count++);
+            document.getElementById('count').innerHTML = count;
+        }, 500);
+    </script>
+</body>
+</html>
